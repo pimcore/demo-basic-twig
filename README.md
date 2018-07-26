@@ -5,7 +5,7 @@ Pimcore and contains some very basic use-cases to get you started quickly with P
 
 ## Getting started 
 ```bash
-composer create-project pimcore/demo-basic-twig my-project
+composer create-project pimcore/demo-basic-twig:dev-master my-project
 cd ./my-project
 ./vendor/bin/pimcore-install
 ```
