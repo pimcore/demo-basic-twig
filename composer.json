@@ -1,5 +1,5 @@
 {
-  "name": "pimcore/demo-basic",
+  "name": "pimcore/demo-basic-twig",
   "type": "project",
   "license": "GPL-3.0-or-later",
   "config": {
