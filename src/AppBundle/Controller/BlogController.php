@@ -2,7 +2,6 @@
 
 namespace AppBundle\Controller;
 
-use Pimcore\Controller\FrontendController;
 use Pimcore\Model\DataObject;
 use Symfony\Component\HttpFoundation\Request;
 use Zend\Paginator\Paginator;
@@ -61,7 +60,7 @@ class BlogController extends FrontendController
 
         if ($request->get('pdf')) {
             //Simple usage
-            $html = $this->renderView(':Blog:index.html.php', $this->view->getAllParameters());
+            $html = $this->renderView(':Blog:index.html.twig', $this->view->getAllParameters());
 
             return new \Symfony\Component\HttpFoundation\Response(
                 \Pimcore\Web2Print\Processor::getInstance()->getPdfFromString($html),
@@ -74,7 +73,7 @@ class BlogController extends FrontendController
             //Advanced usage
             /*$params = $this->view->getAllParameters();
             $params['testPlaceholder'] = ' :-)';
-            $html = $this->renderView(':Blog:index.html.php', $params);
+            $html = $this->renderView(':Blog:index.html.twig', $params);
 
             $adapter = \Pimcore\Web2Print\Processor::getInstance();
             //add custom settings if necessary

@@ -4,10 +4,9 @@ namespace AppBundle\Controller;
 
 use AppBundle\Form\LoginFormType;
 use AppBundle\Model\DataObject\User;
-use Pimcore\Controller\Configuration\TemplatePhp;
-use Pimcore\Controller\FrontendController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -69,7 +68,7 @@ class SecureController extends FrontendController
      * Sample route which can only be seen by logged in users.
      *
      * @Route("/{_locale}/secure/user", name="demo_secure_user")
-     * @TemplatePhp("Secure/secure.html.php")
+     * @Template("Secure/secure.html.twig")
      * @Security("has_role('ROLE_USER')")
      */
     public function secureUserAction()
@@ -83,7 +82,7 @@ class SecureController extends FrontendController
      * Sample route which can only be seen by logged in admin users.
      *
      * @Route("/{_locale}/secure/admin", name="demo_secure_admin")
-     * @TemplatePhp("Secure/secure.html.php")
+     * @Template("Secure/secure.html.twig")
      */
     public function secureAdminAction()
     {

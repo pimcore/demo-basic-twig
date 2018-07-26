@@ -4,7 +4,6 @@ namespace AppBundle\Controller;
 
 use AppBundle\Form\Newsletter\SubscriptionFormType;
 use AppBundle\Form\Newsletter\UnsubscriptionFormType;
-use Pimcore\Controller\FrontendController;
 use Pimcore\Model;
 use Pimcore\Tool\Newsletter;
 use Symfony\Component\HttpFoundation\Request;

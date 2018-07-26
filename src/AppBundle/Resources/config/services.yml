@@ -38,13 +38,13 @@ services:
         tags:
             - { name: pimcore.area.brick, id: blockquote }
 
-    # a sample templating helper
-    AppBundle\Templating\Helper\LanguageSwitcher:
-        # templating helpers need to be public as they
-        # are fetched from the container on demand
-        public: true
+    AppBundle\Twig\LanguageSwitcherExtension:
         tags:
-            - { name: templating.helper, alias: languageSwitcher }
+            - { name: twig.extension }
+
+    AppBundle\Twig\UniqidExtension:
+        tags:
+            - { name: twig.extension }
 
 
     #

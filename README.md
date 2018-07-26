@@ -1,11 +1,11 @@
-# Pimcore 5 Demo Basic (PHP-Templates)
+# Pimcore 5 Demo Basic (Twig-Templates)
  
 This demo package is intended to be used by Pimcore newcomers. It's tailored get an overview of 
 Pimcore and contains some very basic use-cases to get you started quickly with Pimcore.  
 
 ## Getting started 
 ```bash
-composer create-project pimcore/demo-basic my-project
+composer create-project pimcore/demo-basic-twig my-project
 cd ./my-project
 ./vendor/bin/pimcore-install
 ```
