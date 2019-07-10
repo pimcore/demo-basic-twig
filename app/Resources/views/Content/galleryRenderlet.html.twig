@@ -2,7 +2,7 @@
     {% if asset %}
 
         <div class="row">
-            {% for image in asset.getChilds() %}
+            {% for image in asset.getChildren() %}
                 {% if image is instanceof('\\Pimcore\\Model\\Asset\\Image') %}
                     <div class="col-md-3 col-xs-6">
                         <a href="{{ image.getThumbnail('galleryLightbox')|raw }}" class="thumbnail">
